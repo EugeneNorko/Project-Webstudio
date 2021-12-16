@@ -1,0 +1,143 @@
+.form-modal__title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: rgba(33, 33, 33, 1);
+}
+
+.form-field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-field__label {
+  display: block;
+  margin-bottom: 4px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 1);
+}
+
+.form-field__wrapp {
+  display: block;
+  position: relative;
+}
+
+.form-field__input {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: 1px solid transparent;
+  border-radius: 4px;
+  padding-left: 42px;
+  padding-right: 10px;
+  cursor: pointer;
+
+  transition: border $transition-duration $timing-function;
+  background-color: transparent;
+
+  &:focus,
+  &:hover {
+    border: 1px solid $active-color;
+  }
+}
+
+.form-field__icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  display: inline-block;
+  transition: fill $transition-duration $timing-function;
+
+  fill: rgba(33, 33, 33, 1);
+
+  .form-field__input:hover + &,
+  .form-field__input:focus + & {
+    fill: $active-color;
+  }
+}
+
+.form-comment {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.form-comment__area {
+  resize: none;
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+
+  transition: border $transition-duration $timing-function;
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus,
+  &:hover {
+    border: 1px solid $active-color;
+  }
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.form-check__input {
+  margin-right: 9px;
+}
+
+.form-check__icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid rgba(33, 33, 33, 1);
+  border-radius: 4px;
+
+  transition: border-color $transition-duration $timing-function;
+
+  .form-check:hover &,
+  .form-check__input:focus + & {
+    border-color: $active-color;
+  }
+
+  .form-check__input:checked + & {
+    background-image: url(../img/check.svg);
+    background-color: $active-color;
+    background-size: contain;
+    background-position: center;
+    background-origin: border-box;
+    border: transparent;
+  }
+}
+
+.form-check__link {
+  color: $active-color;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}

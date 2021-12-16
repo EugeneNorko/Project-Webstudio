@@ -1,0 +1,50 @@
+@mixin section-padding($padding-top, $padding-bottom) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
+
+.section {
+  @include section-padding(0, 94px);
+
+  @media screen and (max-width: 1199px) {
+    &--preferences,
+    &--portfolio,
+    &--clients,
+    &--team {
+      @include section-padding(60px, 60px);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &--preferences,
+    &--portfolio,
+    &--clients,
+    &--team {
+      @include section-padding(94px, 94px);
+    }
+  }
+
+  &--team {
+    background-color: $secondary-bgcolor;
+  }
+
+  &--work {
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+  }
+}
+
+.section--hero {
+  @include section-padding(118px, 118px);
+  margin: 0 auto;
+
+  text-align: center;
+  background-color: $bg-hero;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../img/bg_hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 480px;
+}

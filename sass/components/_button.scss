@@ -1,0 +1,85 @@
+.button {
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  &--page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5px;
+    min-width: 200px;
+    min-height: 50px;
+
+    transition-property: border-color, box-shadow, background-color, text-shadow;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+
+    background-color: $active-color;
+    color: $primary-bgcolor;
+
+    &:hover,
+    &:focus {
+      background-color: $button-hover-bg;
+      border: 1px solid $black-color;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), -0 -1px 0 #000000, 0 -1px 0 #000000,
+        -0 1px 0 #000000, 0 1px 0 #000000, -1px -0 0 #000000, 1px -0 0 #000000, -1px 0 0 #000000,
+        1px 0 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+        1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+        1px 1px 0 #000000;
+    }
+  }
+
+  &--modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    transition: color $transition-duration $timing-function,
+      border-color $transition-duration $timing-function;
+
+    color: rgba(0, 0, 0, 1);
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $active-color;
+      border-color: $active-color;
+    }
+  }
+
+  &--form-modal {
+    width: 200px;
+    min-height: 50px;
+
+    transition: background-color $transition-duration $timing-function,
+      box-shadow $transition-duration $timing-function;
+
+    background-color: $active-color;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 1);
+
+    &:hover,
+    &:focus {
+      background-color: $button-hover-bg;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
