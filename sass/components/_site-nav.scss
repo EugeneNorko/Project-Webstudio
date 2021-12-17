@@ -1,18 +1,20 @@
 .site-nav {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .site-nav__item {
-  &:not(:last-child) {
-    margin-right: 50px;
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 
 .site-nav__link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   transition-property: color;
   transition-duration: $transition-duration;
@@ -45,5 +47,10 @@
     height: 4px;
 
     background-color: $active-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }

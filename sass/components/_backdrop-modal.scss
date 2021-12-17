@@ -24,16 +24,25 @@
   transform: translate(-50%, -50%);
   transition: transform 400ms linear;
 
-  min-width: 528px;
-  min-height: 581px;
   border-radius: 4px;
   padding: 40px;
+  width: 450px;
+  min-height: 609px;
 
   text-align: center;
   background-color: #ffffff;
 
   .backdrop.is-hidden & {
     transform: translate(-50%, -150%);
+  }
+
+  @media screen and (min-width: 768px) {
+    min-height: 581px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
   }
 }
 

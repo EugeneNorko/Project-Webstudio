@@ -4,8 +4,7 @@
   text-decoration: none;
   font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 }
 
@@ -21,6 +20,18 @@
   &--header {
     padding-top: 16px;
     padding-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 26px;
+      padding-bottom: 26px;
+      margin-right: 88px;
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+      text-align: left;
+    }
     // margin-right: 93px;
     // padding-top: 24px;
     // padding-bottom: 24px;
