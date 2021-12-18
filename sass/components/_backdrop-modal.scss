@@ -1,5 +1,8 @@
 .backdrop {
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 11;
   background-color: rgba(0, 0, 0, 0.2);
   top: 0;
@@ -15,29 +18,45 @@
     visibility: hidden;
     transition: opacity 400ms linear, visibility 400ms linear;
   }
+
+  @media screen and (max-width: 767px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   transition: transform 400ms linear;
-
   border-radius: 4px;
   padding: 40px;
-  width: 450px;
   min-height: 609px;
 
   text-align: center;
   background-color: #ffffff;
 
+  @media screen and (max-width: 767px) {
+    position: relative;
+    transform: translateY(0);
+    width: 100%;
+  }
+
   .backdrop.is-hidden & {
-    transform: translate(-50%, -150%);
+    @media screen and (max-width: 767px) {
+      transform: translateY(-150%);
+    }
+
+    @media screen and (min-width: 768px) {
+      transform: translate(-50%, -150%);
+    }
   }
 
   @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     min-height: 581px;
+    width: 450px;
   }
 
   @media screen and (min-width: 1200px) {

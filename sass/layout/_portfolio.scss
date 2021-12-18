@@ -1,5 +1,5 @@
 .portfolio-set {
-  margin: -15px;
+  // margin: -15px;
 
   @media screen and (max-width: 767px) {
     justify-content: center;
@@ -15,7 +15,7 @@
   margin: 15px;
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 2 * 40px) / 2);
+    width: calc((100% - 2 * 30px) / 2);
   }
 
   @media screen and (min-width: 1200px) {
