@@ -1,16 +1,10 @@
-.filter-set {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
+.filter-set-container {
   @media screen and (max-width: 767px) {
     margin-bottom: 40px;
-    justify-content: flex-start;
   }
 
   @media screen and (min-width: 768px) {
     margin-bottom: 30px;
-    justify-content: center;
   }
 
   @media screen and (min-width: 1200px) {
@@ -18,16 +12,29 @@
   }
 }
 
-.filter-set__item {
-  &:not(:last-child) {
-    margin-right: 8px;
-  }
+.filter-set {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: -4px;
 
   @media screen and (max-width: 767px) {
-    margin-bottom: 15px;
-    &:nth-last-child(-n + 2) {
-      margin-bottom: 0;
-    }
+    justify-content: flex-start;
+    margin-top: -7px;
+    margin-bottom: -7px;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.filter-set__item {
+  margin: 4px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 7px;
+    margin-top: 7px;
   }
 }
 

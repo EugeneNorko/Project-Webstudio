@@ -43,7 +43,7 @@
   &--current::after {
     position: absolute;
     content: '';
-    bottom: 0;
+    bottom: -1px;
 
     display: block;
     border-radius: 2px;
@@ -51,6 +51,10 @@
     height: 4px;
 
     background-color: $active-color;
+
+    @media screen and (min-width: 1200px) {
+      bottom: -2px;
+    }
   }
 
   @media screen and (min-width: 768px) {

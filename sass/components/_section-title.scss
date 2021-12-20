@@ -28,6 +28,9 @@
   text-transform: uppercase;
   color: $primary-bgcolor;
 
+  @media screen and (max-width: 480px) {
+    font-size: 5.42vw;
+  }
   @media screen and (min-width: 1200px) {
     font-size: 44px;
     line-height: 1.36;

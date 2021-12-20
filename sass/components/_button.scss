@@ -36,6 +36,9 @@
         1px 1px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
         1px 1px 0 #000000;
     }
+    @media screen and (max-width: 480px) {
+      min-width: 43.5vw;
+    }
   }
 
   &--modal {

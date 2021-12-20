@@ -4,8 +4,6 @@
 }
 
 .section {
-  @include section-padding(0, 94px);
-
   @media screen and (max-width: 1199px) {
     &--preferences,
     &--portfolio,
@@ -54,11 +52,8 @@
     }
   }
 
-  @media screen and (max-width: 1199px) {
-    @include section-padding(118px, 118px);
-  }
-
   @media screen and (min-width: 768px) {
+    @include section-padding(118px, 118px);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url('../img/tablet/hero_bg_tablet.jpg');
 
