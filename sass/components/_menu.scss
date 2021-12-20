@@ -39,6 +39,7 @@
     padding-left: 40px;
     padding-right: 40px;
     background-color: $primary-bgcolor;
+    overflow-y: scroll;
 
     &.is-hidden {
       display: none;

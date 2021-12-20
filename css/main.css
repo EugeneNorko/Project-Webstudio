@@ -1274,6 +1274,7 @@ input:-webkit-autofill:active {
     padding-left: 40px;
     padding-right: 40px;
     background-color: #ffffff;
+    overflow-y: scroll;
   }
   .menu.is-hidden {
     display: none;
