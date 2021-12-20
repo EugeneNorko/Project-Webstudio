@@ -32,7 +32,9 @@
   transition-duration: $transition-duration;
   transition-timing-function: $timing-function;
 
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   color: $primary-text-color;
   font-size: 16px;
@@ -71,7 +73,7 @@
   color: $overlay-text-color;
 
   @media screen and (max-width: 400px) {
-    font-size: 14px;
+    font-size: 16px;
     overflow-y: scroll;
   }
 
@@ -95,6 +97,8 @@
 }
 
 .portfolio-set__bottom-container {
+  flex-grow: 1;
+
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;

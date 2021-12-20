@@ -806,6 +806,7 @@ input:-webkit-autofill:active {
   opacity: 1;
   -webkit-transition: opacity 400ms linear;
   transition: opacity 400ms linear;
+  overflow-y: scroll;
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -835,8 +836,8 @@ input:-webkit-autofill:active {
 @media screen and (max-width: 767px) {
   .modal {
     position: relative;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
     width: 100%;
   }
 }
@@ -1257,29 +1258,33 @@ input:-webkit-autofill:active {
   top: 10px;
   right: 15px;
 }
+.menu.is-hidden .menu__close {
+  opacity: 0;
+}
 
-@media screen and (max-width: 767px) {
-  .menu {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    opacity: 1;
-    -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: #ffffff;
-    overflow-y: scroll;
-  }
-  .menu.is-hidden {
-    display: none;
-    opacity: 0;
-  }
+.menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 1;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #ffffff;
+  overflow-y: scroll;
+}
+.menu.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .menu {
@@ -1344,6 +1349,8 @@ input:-webkit-autofill:active {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #757575;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-contacts__mail-link {
@@ -1353,6 +1360,9 @@ input:-webkit-autofill:active {
   .menu-contacts__mail-link {
     font-size: 5vw;
   }
+}
+.menu-contacts__mail-link:hover, .menu-contacts__mail-link:focus {
+  color: #2196f3;
 }
 
 .menu-contacts__tel-link {
@@ -1365,9 +1375,6 @@ input:-webkit-autofill:active {
   .menu-contacts__tel-link {
     font-size: 7vw;
   }
-}
-.menu-contacts__tel-link:hover, .menu-contacts__tel-link:focus {
-  color: #2196f3;
 }
 
 .menu-social {
@@ -1827,7 +1834,14 @@ input:-webkit-autofill:active {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   color: #757575;
   font-size: 16px;
   line-height: 1.87;
@@ -1866,7 +1880,7 @@ input:-webkit-autofill:active {
 }
 @media screen and (max-width: 400px) {
   .portfolio-set__text {
-    font-size: 14px;
+    font-size: 16px;
     overflow-y: scroll;
   }
 }
@@ -1899,6 +1913,9 @@ input:-webkit-autofill:active {
 }
 
 .portfolio-set__bottom-container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;

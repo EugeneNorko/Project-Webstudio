@@ -11,6 +11,7 @@
   height: 100%;
   opacity: 1;
   transition: opacity 400ms linear;
+  overflow-y: scroll;
 
   &.is-hidden {
     opacity: 0;
@@ -36,7 +37,7 @@
 
   @media screen and (max-width: 767px) {
     position: relative;
-    transform: translateY(0);
+    transform: translateY(0%);
     width: 100%;
   }
 
