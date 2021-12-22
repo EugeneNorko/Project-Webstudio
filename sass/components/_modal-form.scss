@@ -102,9 +102,7 @@
 /////////Custom checkbox//////////
 
 .form-check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   margin-bottom: 30px;
   cursor: pointer;
 
@@ -112,6 +110,11 @@
   line-height: 1.17;
   letter-spacing: 0.03em;
 
+  @media screen and (min-width: 480px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.71;
@@ -124,14 +127,17 @@
 
 .form-check__icon {
   display: inline-block;
-  min-width: 16px;
-  min-height: 15px;
+  width: 16px;
+  height: 15px;
   margin-right: 7px;
   border: 2px solid rgba(33, 33, 33, 1);
   border-radius: 4px;
 
   transition: border-color $transition-duration $timing-function;
 
+  @media screen and (max-width: 479px) {
+    margin-bottom: -2px;
+  }
   .form-check:hover &,
   .form-check__input:focus + & {
     border-color: $active-color;

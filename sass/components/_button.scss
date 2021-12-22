@@ -68,8 +68,12 @@
   }
 
   &--form-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 200px;
     min-height: 50px;
+    margin: 0 auto;
 
     transition: background-color $transition-duration $timing-function,
       box-shadow $transition-duration $timing-function;

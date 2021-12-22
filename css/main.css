@@ -611,8 +611,18 @@ input:-webkit-autofill:active {
   border-color: #2196f3;
 }
 .button--form-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 200px;
   min-height: 50px;
+  margin: 0 auto;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -995,20 +1005,25 @@ input:-webkit-autofill:active {
 }
 
 .form-check {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: inline-block;
   margin-bottom: 30px;
   cursor: pointer;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 480px) {
+  .form-check {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .form-check {
@@ -1023,13 +1038,18 @@ input:-webkit-autofill:active {
 
 .form-check__icon {
   display: inline-block;
-  min-width: 16px;
-  min-height: 15px;
+  width: 16px;
+  height: 15px;
   margin-right: 7px;
   border: 2px solid #212121;
   border-radius: 4px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 479px) {
+  .form-check__icon {
+    margin-bottom: -2px;
+  }
 }
 .form-check:hover .form-check__icon, .form-check__input:focus + .form-check__icon {
   border-color: #2196f3;
