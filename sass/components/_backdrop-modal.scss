@@ -51,6 +51,10 @@
     }
   }
 
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
   @media screen and (min-width: 768px) {
     position: absolute;
     top: 50%;

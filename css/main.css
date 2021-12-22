@@ -593,8 +593,8 @@ input:-webkit-autofill:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 30px;
-  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -861,6 +861,11 @@ input:-webkit-autofill:active {
   .backdrop.is-hidden .modal {
     -webkit-transform: translate(-50%, -150%);
             transform: translate(-50%, -150%);
+  }
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
   }
 }
 @media screen and (min-width: 768px) {
