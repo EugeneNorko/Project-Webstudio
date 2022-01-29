@@ -44,17 +44,6 @@
     visibility: visible;
     pointer-events: initial;
   }
-  // &.is-hidden {
-  //   visibility: hidden;
-  //   pointer-events: none;
-  //   opacity: 0;
-  //   transition: opacity $transition-duration $timing-function,
-  //     visibility $transition-duration $timing-function;
-  // }
-
-  // @media screen and (min-width: 768px) {
-  //   display: none;
-  // }
 }
 
 .menu__container {
