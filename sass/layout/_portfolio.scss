@@ -25,6 +25,10 @@
   @media screen and (min-width: 1200px) {
     width: calc((100% - 3 * 30px) / 3);
   }
+
+  &.hide {
+    display:none;
+  }
 }
 
 .portfolio-set__link {

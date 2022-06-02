@@ -100,21 +100,21 @@
     </header>
     <main class="main">
         <section class="section--portfolio section">
-            <div class="container">
+            <div class="container" >
             <h1 class="visually-hidden">Портфолио Webstudio</h1>
             <div class="filter-set-container">
-            <ul class="filter-set">
-                <li class="filter-set__item"><button type="button" class="filter-set__button filter-set__button--current button">Все</button></li>
-                <li class="filter-set__item"><button type="button" class="filter-set__button button">Веб-сайты</button></li>
-                <li class="filter-set__item"><button type="button" class="filter-set__button button">Приложения</button></li>
-                <li class="filter-set__item"><button type="button" class="filter-set__button button">Дизайн</button></li>
-                <li class="filter-set__item"><button type="button" class="filter-set__button button">Маркетинг</button></li>
+            <ul class="filter-set" data-filter-set>
+                <li class="filter-set__item"><button type="button" class="filter-set__button button js-active" data-filter="all">Все</button></li>
+                <li class="filter-set__item"><button type="button" class="filter-set__button button" data-filter="web-site">Веб-сайты</button></li>
+                <li class="filter-set__item"><button type="button" class="filter-set__button button" data-filter="app">Приложения</button></li>
+                <li class="filter-set__item"><button type="button" class="filter-set__button button" data-filter="design">Дизайн</button></li>
+                <li class="filter-set__item"><button type="button" class="filter-set__button button" data-filter="marketing">Маркетинг</button></li>
             </ul>
             </div>
 
             <div class="portfolio-set-container">
             <ul class="portfolio-set">
-                <li class="portfolio-set__item">
+                <li class="portfolio-set__item" data-card-type="web-site">
                     <a href="" class="portfolio-set__link">
                         <div class="portfolio-set__overlay">
                             <picture>
@@ -137,7 +137,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="portfolio-set__item">
+                <li class="portfolio-set__item" data-card-type="design">
                     <a href="" class="portfolio-set__link">
                         <div class="portfolio-set__overlay">
                             <picture>
@@ -162,7 +162,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="portfolio-set__item">
+                <li class="portfolio-set__item" data-card-type="app">
                     <a href="" class="portfolio-set__link">
                         <div class="portfolio-set__overlay">
                             <picture>
@@ -187,7 +187,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="portfolio-set__item">
+                <li class="portfolio-set__item" data-card-type="marketing>
                     <a href="" class="portfolio-set__link">
                         <div class="portfolio-set__overlay">
                             <picture>
@@ -212,7 +212,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="portfolio-set__item">
+                <li class="portfolio-set__item" data-card-type="app">
                     <a href="" class="portfolio-set__link">
                         <div class="portfolio-set__overlay">
                             <picture>
@@ -237,7 +237,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="portfolio-set__item">
+                <li class="portfolio-set__item" data-card-type="web-site">
                     <a href="" class="portfolio-set__link">
                         <div class="portfolio-set__overlay">
                             <picture>
@@ -262,7 +262,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="portfolio-set__item">
+                <li class="portfolio-set__item" data-card-type="design">
                     <a href="" class="portfolio-set__link">
                         <div class="portfolio-set__overlay">
                             <picture>
@@ -287,7 +287,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="portfolio-set__item">
+                <li class="portfolio-set__item" data-card-type="marketing">
                     <a href="" class="portfolio-set__link">
                         <div class="portfolio-set__overlay">
                             <picture>
@@ -312,7 +312,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="portfolio-set__item">
+                <li class="portfolio-set__item" data-card-type="app">
                     <a href="" class="portfolio-set__link">
                         <div class="portfolio-set__overlay">
                             <picture>
@@ -412,5 +412,6 @@
         integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
         crossorigin="anonymous"></script>
     <script src="./scripts/mobile-menu.js"></script>
+    <script src="./scripts/filter.js" type="module"></script>
 </body>
 </html>
